@@ -1,9 +1,11 @@
-function fetch1() {
+function fetch1(setAdvice) {
     async function fetcher (){
+
         try{
-        const data = await fetch('https://api.example.com/data') ;
+        const data = await fetch('https://api.adviceslip.com/advice') ;
         const res = await data.json() ; 
-        console.log(res) ; 
+        console.log(res.slip.advice) ; 
+        setAdvice(res.slip.advice);
         
 
     }
