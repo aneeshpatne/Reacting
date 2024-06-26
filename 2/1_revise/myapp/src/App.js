@@ -14,9 +14,9 @@ function App(){
     }
   }
 return (<div>
-  {value}
+  
   <h1>Hello</h1>
-  <button onClick={helper}>Click Here</button>
+  <button onClick={helper}>Click Here {value}</button>
   </div>);
 }
 
