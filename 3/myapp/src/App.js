@@ -1,21 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
 import { useState } from 'react';
+import './App.css';
 import { coffee } from './assets/img';
-
-function App() {
-  const [count, setCount] = useState(0);
-  //count = 1;
-  const f1 = () =>{
-    setCount((d) => d+1)
-  }
+function Coffee({ name }) {
   return (
-    <div>
-      
+    <div className='main-box'>
+      <h2 className='coffee-name'>Coffee Name: {name}</h2>
+    </div>
+  );
+}
+function App(){
+  //const [count,setCount] = useState(1);
+  return(<div>
+  <Coffee name='Espresso'/>
+  <Coffee name='Americano'/>
+  <Coffee name='Latte'/>
+  </div>
 
-      <h2>Hello</h2>
-      <div id='box' className={count %2 ===0 ? 'red' : 'blue'}>Hello</div>
-    <button onClick={f1}>Click Me</button></div>
 
   );
 }
