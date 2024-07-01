@@ -5,6 +5,9 @@ function Coffee({ name }) {
   return (
     <div className='main-box'>
       <h2 className='coffee-name'>Coffee Name: {name}</h2>
+      <div className='button-container'>
+        <button className='b1'>Buy Now</button>
+      </div>
     </div>
   );
 }
