@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+#box{
+  height: 50px;
+  width: 50px;
+}
+.red{
+  background-color: rgb(127, 135, 255);
+}
+.blue{
+  background-color: rgb(171, 240, 207);
+}

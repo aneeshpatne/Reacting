@@ -14,8 +14,8 @@ function App() {
       
 
       <h2>Hello</h2>
-    <button onClick={f1}>Click Me</button>
-    {count % 2 ===0 && <img src ={coffee}/>}</div>
+      <div id='box' className={count %2 ===0 ? 'red' : 'blue'}>Hello</div>
+    <button onClick={f1}>Click Me</button></div>
 
   );
 }
