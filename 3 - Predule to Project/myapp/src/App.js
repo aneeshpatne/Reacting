@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { coffee } from './assets/img';
+import { coffee, coffee1, coffee2 } from './assets/img';
 function Coffee({ name,imgsrc }) {
   return (
     <div className='main-box'>
@@ -18,8 +18,8 @@ function App(){
   //const [count,setCount] = useState(1);
   return(<div>
   <Coffee name='Espresso' imgsrc={coffee}/>
-  <Coffee name='Americano'/>
-  <Coffee name='Latte'/>
+  <Coffee name='Americano' imgsrc={coffee1}/>
+  <Coffee name='Latte' imgsrc={coffee2}/>
   </div>
 
 
