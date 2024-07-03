@@ -9,7 +9,7 @@ function Ftc() {
             setData(result);
         }
         fetchData()
-        const interval = setInterval(fetchData,100);
+        const interval = setInterval(fetchData,15000);
         return () => clearInterval(interval);
     },[])
     return (<div>{data ? <pre>{JSON.stringify(data, null, 2)}</pre> : 'Loading...'}</div>);
