@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import HeaderComponenet from './components/header';
+import Ftc from './components/data-fetcher';
 import { useState } from 'react';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <div>
     <HeaderComponenet c1 = {count}/>
     <button onClick={f1}>Click Me</button>
+    <Ftc />
     </div>
   );
 }
