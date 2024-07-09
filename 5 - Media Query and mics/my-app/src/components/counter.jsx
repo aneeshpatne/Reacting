@@ -7,7 +7,7 @@ function Counter(){
 
     }
     return(<div>
-        {count % 2 !==0 && <p1>Odd Nos</p1>} <br/>
+        {count % 2 !==0 ? <p>Odd Nos</p> : <p>Even Nos</p>} <br/>
         <button onClick={f1}>Click Me</button>
         {count}
     </div>);
