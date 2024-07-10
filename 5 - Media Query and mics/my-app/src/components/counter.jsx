@@ -4,7 +4,6 @@ function Counter(){
     const [count, setCount] = useState(0);
     const f1 = ()=> {
         setCount((prev)=> prev+1)
-
     }
     return(<div>
         {count % 2 !==0 ? <p>Odd Nos</p> : <p>Even Nos</p>} <br/>
