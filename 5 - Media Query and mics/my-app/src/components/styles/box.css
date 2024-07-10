@@ -1,0 +1,10 @@
+#blue-box{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(71, 166, 193);
+}
+#red-box{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(251, 105, 112);
+}
