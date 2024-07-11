@@ -8,3 +8,13 @@
     width: 50px;
     background-color: rgb(251, 105, 112);
 }
+.green{
+    background-color: rgb(153, 237, 119);
+}
+.alter{
+    background-color:  rgb(248, 109, 237);
+}
+#box{
+    width: 500px;
+    height: 500px;
+}
