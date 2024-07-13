@@ -1,9 +1,10 @@
 import './App.css';
-import MidLayout from './components/midLayout';
+//import MidLayout from './components/midLayout';
+import Project from './components/projects';
 function App() {
   return (
     <div>
-    <MidLayout />
+    <Project />
     </div>
   );
 }
