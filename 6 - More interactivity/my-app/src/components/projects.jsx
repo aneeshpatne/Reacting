@@ -22,15 +22,19 @@ function ProjectContainer({imgSrc, title, desc, tech}){
     </div>)
 };
 
-const d1 = [ {'Title' : 'Personal Portfolio' ,
+const d1 = [ 
+    {'Title' : 'Personal Portfolio' ,
     'desc' : 'A sleek and user-friendly personal portfolio website to showcase my projects, skills, and achievements, with intuitive navigation and modern design',
     'tech': ['Next','GCP']},
     {'Title' : 'Vishv' ,
-        'desc' : 'A web application to promote awareness on climate change and quality education, incorporating an inclusive color-blindness-friendly interface , featuring ML-driven AQI predictions',
-        'tech': ['React','GCP','ML']},
-        {'Title' : 'Vishv' ,
-            'desc' : 'A web application to promote awareness on climate change and quality education, incorporating an inclusive color-blindness-friendly interface , featuring ML-driven AQI predictions',
-            'tech': ['React','GCP','ML']},
+    'desc' : 'A web application to promote awareness on climate change and quality education, incorporating an inclusive color-blindness-friendly interface , featuring ML-driven AQI predictions',
+    'tech': ['React','GCP','ML']},
+    {'Title' : 'Vishv' ,
+    'desc' : 'A web application to promote awareness on climate change and quality education, incorporating an inclusive color-blindness-friendly interface , featuring ML-driven AQI predictions',
+    'tech': ['React','GCP','ML']},
+    {'Title' : 'Vishv' ,
+    'desc' : 'A web application to promote wareness on climate change and quality education, incorporating an inclusive color-blindness-friendly interface , featuring ML-driven AQI predictions',
+    'tech': ['React','GCP','ML']}
         ];
 
 export default function Project(){
