@@ -1,49 +1,73 @@
 'use client';
+import { useEffect, useState, useCallback } from "react";
 
-import { useEffect, useState } from "react";
+export default function Home() {
+    const [task, setTask] = useState([]);
+    const [isClient, setIsClient] = useState(false);
+    const [userInput, setInput] = useState('');
 
-export default function Home(){
-    const [tasks, setTasks] = useState([]);
-    const [input, setInput] = useState('');
-    useEffect(()=>{
-        const savedTasks = localStorage.getItem('tasks')
-        if (savedTasks){
-            setTasks(JSON.parse(savedTasks));
+    useEffect(() => {
+        setIsClient(true);
+        const savedTasks = localStorage.getItem('tasks');
+        if (savedTasks) {
+            setTask(JSON.parse(savedTasks));
         }
     }, []);
-    useEffect(()=>{
-        localStorage.setItem('tasks', JSON.stringify(tasks))
-    },[tasks]);
-    const addTask = (e) =>{
-        e.preventDefault();
-        if (input.trim() === "") return;
-        const newTask ={
-            id:Date.now(),
-            text:input,
-            completed:false,
+
+    const saveTasks = useCallback((tasksToSave) => {
+        try {
+            console.log('Saving tasks to localStorage:', tasksToSave);
+            localStorage.setItem('tasks', JSON.stringify(tasksToSave));
+        } catch (error) {
+            console.error("Error saving tasks to localStorage:", error);
         }
-        setTasks([...tasks, newTask]);
+    }, []);
+
+    useEffect(() => {
+        if (isClient) {
+            saveTasks(task);
+        }
+    }, [task, isClient, saveTasks]);
+
+    const addData = (e) => {
+        e.preventDefault();
+        if (userInput.trim() === "") return;
+        const newData = {
+            id: Date.now(),
+            text: userInput,
+            completed: false,
+        }
+        setTask(prevTasks => [...prevTasks, newData]);
         setInput('');
+    }
+
+    const deleteData = (id) => {
+        setTask(prevTasks => prevTasks.filter((task) => task.id !== id));
     };
-    return(<div>
-       
-        <h1>React Todo List</h1>
-        <form onSubmit={addTask}>
-            <input type="text"
-            placeholder="Enter New Task"
-            value={input} 
-            onChange={(e) => setInput(e.target.value)} 
-            />
-            <button type="submit">Add Task</button>
-        </form>
 
-        {tasks.map((task) => (
-                        <li key={task.id}>
-                            Name: {task.text}
-                            Task ID: {task.id}
+    if (!isClient) {
+        return (<div>Loading</div>); 
+    }
 
-                        </li>
-                    ))}
-    </div>
- )
+    return (
+        <div>
+            <form onSubmit={addData}>
+                <input 
+                    type="text"
+                    placeholder="Enter task name"
+                    value={userInput}
+                    onChange={(e) => setInput(e.target.value)} 
+                />
+                <button type="submit">Add Task</button>
+            </form>
+            <ul>
+                {task.map((t) =>
+                    <li key={t.id}>
+                        {t.text}
+                        <button onClick={() => deleteData(t.id)}>DELETE</button>
+                    </li>
+                )}
+            </ul>
+        </div>
+    );
 }
