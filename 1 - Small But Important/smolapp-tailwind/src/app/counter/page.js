@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react"
+import { useState } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react"
 import { Button } from "@/components/ui/button";
 export default function Home(){

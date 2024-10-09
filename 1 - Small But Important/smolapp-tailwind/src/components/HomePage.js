@@ -8,6 +8,7 @@ export default function HomePage(){
 <DefaultButton name={"Counter" } path={'/counter'}/>
 <DefaultButton name={"To- Do"} path={'/todo'}/>
 <DefaultButton name={"Ghaph"} path={'/graph'}/>
+<DefaultButton name={"Random Number"} path={'/randomNumber'}/>
         </div>
     )
 }
