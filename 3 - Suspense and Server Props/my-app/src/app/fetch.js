@@ -1,8 +1,13 @@
 const FetchPages = async () =>{
-    const response = await fetch('https://jsonplaceholder.typicoe.com/posts');
+    const response = await fetch('https://aneeshpatne.com');
     if (!response.ok) {
         throw new Error("DATA CANT BE FETCHED");}
+    const resposeType = response.headers.get('content-type');
+    if (!resposeType || !resposeType.includes("application/json")) {
+        throw new Error("API did not return JSON");
+      }
     const data = await response.json();
+    
     return(
       <div>
         {data.map(d =>(
@@ -13,9 +18,5 @@ const FetchPages = async () =>{
         ))}
       </div>
     );
-    catch (error) {
-        return <div>Error: {error.message}</div>;
-      }
-    };
-
+}
     export default FetchPages;
