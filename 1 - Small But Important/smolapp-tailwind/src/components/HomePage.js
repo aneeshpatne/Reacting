@@ -4,11 +4,12 @@ import { NiceButton } from "./nice-button";
 export default function HomePage(){
     const Router = useRouter()
     return (
-        <div className="p-5">
+        <div className="flex gap-5 p-5">
 <DefaultButton name={"Counter" } path={'/counter'}/>
 <DefaultButton name={"To- Do"} path={'/todo'}/>
 <DefaultButton name={"Ghaph"} path={'/graph'}/>
 <DefaultButton name={"Random Number"} path={'/randomNumber'}/>
+<DefaultButton name={"Fetch"} path={'/fetch'}/>
         </div>
     )
 }
