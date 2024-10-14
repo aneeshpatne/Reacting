@@ -1,6 +1,7 @@
 'use client';
 import { useRouter } from "next/navigation";
 import { NiceButton } from "./nice-button";
+import { Suspense } from "react";
 export default function HomePage(){
     const Router = useRouter()
     return (
@@ -10,6 +11,10 @@ export default function HomePage(){
 <DefaultButton name={"Ghaph"} path={'/graph'}/>
 <DefaultButton name={"Random Number"} path={'/randomNumber'}/>
 <DefaultButton name={"Fetch"} path={'/fetch'}/>
+<Suspense fallback={<h1>WAITING</h1>}>
+<DefaultButton name={"SVG"} path={'/svgGraphics'}/>
+</Suspense>
+
         </div>
     )
 }
