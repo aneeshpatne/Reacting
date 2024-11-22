@@ -9,7 +9,7 @@ This repository contains multiple projects demonstrating various React and Next.
   - Small example applications
 
 - **2 - React Hooks & Themes**
-  - Hook implementation examples
+  - Hook implementation examplesd
   - Theme switching functionality
   - Next.js theming integration
 
