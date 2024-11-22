@@ -1,0 +1,71 @@
+#project-container{
+    height: 500px;
+    width: 300px;
+    background-color: #1E2831;
+}
+#project-img{
+    width: 100%;
+    height: 180px;
+    background-color: azure;
+}
+#project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+#project-name{
+    margin: 2% 2%;
+    color: white;
+}
+#project-desc{
+    font-size: 0.8rem;
+    color: white;
+    padding: 10px;
+    text-align: justify;
+}
+#techstack{
+    display: flex;
+    align-items: center;
+    margin: 2% 2%;
+    width: 80px;
+    height: 30px;
+    background-color: white;
+}
+
+#techstack-container{
+    margin: 2% 2%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px; 
+
+}
+#techstack-logo{
+    width: 22px;
+    height: 22px;
+    margin-left: 5%;
+}
+#techstack-logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#techstack-name{
+    margin-left: 5%;
+}
+#project-container-main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+@media screen and (max-width: 950px){
+    #project-container-main{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+@media screen and (max-width: 600px){
+    #project-container-main{
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+}
